@@ -13,3 +13,22 @@
  *= require_tree .
  *= require_self
  */
+
+.form-login {
+	background: white;
+	border: outset;
+	width: 50rem;
+	height: 20rem;
+	text-align: center;
+	margin-left: 20%;
+	margin-top: 10%;
+}
+#h2-login {
+	border: outset;
+}
+.link-login {
+	border: outset;
+	text-align: center;
+	width: 50rem;
+	margin-left: 20%;
+}
