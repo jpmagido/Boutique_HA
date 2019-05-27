@@ -13,7 +13,9 @@
  *= require_tree .
  *= require_self
  */
-
+button:focus {
+	background: #FFC0CB;
+}
 .form-login {
 	border: white solid;
 	border-radius: 10px, 5px, 10px, 5px;
@@ -101,4 +103,7 @@
 	padding: 20px;
 	width: 350px;
 	height: 600px;
+}
+#div-button-user{
+	margin: auto;
 }
