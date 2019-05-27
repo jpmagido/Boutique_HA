@@ -1,4 +1,4 @@
-# README
+ls# README
 
 ESSAY 3
 
@@ -21,6 +21,3 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
-  
-
-  test delivery
