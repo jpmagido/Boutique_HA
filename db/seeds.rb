@@ -32,3 +32,5 @@ def perfom
 end
 
 perfom
+
+puts "Seed Done !! :)"
