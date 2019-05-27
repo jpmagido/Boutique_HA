@@ -13,8 +13,13 @@
  *= require_tree .
  *= require_self
  */
+
 button:focus {
 	background: #FFC0CB;
+
+
+footer a{
+	color: white;
 }
 .form-login {
 	border: white solid;
@@ -104,6 +109,33 @@ button:focus {
 	width: 350px;
 	height: 600px;
 }
+
 #div-button-user{
 	margin: auto;
 }
+
+
+
+/************************/
+/* 	    FOOTER        */
+/************************/
+
+#footer{
+	background-color: #333;
+	height: 140px;
+
+}
+
+#div-footer-right{
+	display: flex;
+	flex-direction: column;
+	align-self: flex-end;
+
+
+}
+#div-footer-bot{
+	margin-top: 20px;
+}
+
+/************************/
+>>>>>>> 9b28ce2c94e5d22cf286e671aa0a357669d83c12
