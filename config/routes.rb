@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root to: "devise/sessions#new"
+  root to: "items#index"
   devise_for :users
 
 resources :items

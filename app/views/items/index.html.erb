@@ -1,1 +1,15 @@
-<h2>INDEX ITEM</h2>
+<div class="container ">
+<div class="row d-flex justify-content-around ">
+  <% @items.each do |item| %>
+<div class="card mb-3" style="width: 21rem;">
+  <img src="<%= item.image_url %>" class="card-img-top" alt="...">
+  <div class="card-body ">
+    <h5 class="card-title"><%= item.name %></h5>
+    <p class="card-text"><%= item.description %>.</p>
+    <p class="card-price"><%= item.price %>$</p>
+    <a href="#" class="btn btn-primary">Add to Cart</a>
+  </div>
+</div>
+<% end %>
+</div>
+</div>
