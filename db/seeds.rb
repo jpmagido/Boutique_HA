@@ -13,7 +13,7 @@ end
 
 def create_items
   20.times do
-    Item.create(name: Faker::Commerce.product_name, description: Faker::Lorem.sentence, price: Faker::Commerce.price, img_url: Faker::LoremFlickr.image)
+    Item.create(name: Faker::Commerce.product_name, description: Faker::Lorem.sentence, price: Faker::Commerce.price, image_url: Faker::LoremFlickr.image)
   end
 end
 
@@ -22,4 +22,4 @@ def perfom
   create_items
 end
 
-perfom 
+perfom
