@@ -47,10 +47,7 @@ GEM
     archive-zip (0.12.0)
       io-like (~> 0.3.0)
     arel (9.0.0)
-<<<<<<< HEAD
-=======
-    bcrypt (3.1.12)
->>>>>>> 14061953f8e0452336529137003ecde63e2b91a1
+
     better_errors (2.5.1)
       coderay (>= 1.0.0)
       erubi (>= 1.0.0)
