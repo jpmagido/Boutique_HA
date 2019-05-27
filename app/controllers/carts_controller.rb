@@ -4,7 +4,7 @@ class CartsController < ApplicationController
 		
 	end
 
-	def show
+	def index
 		@cart = Cart.find(current_user.id) 
 		@items = []
 		Cart.all.each { |i|
