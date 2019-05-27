@@ -8,14 +8,15 @@
 require 'faker'
 
 def destroy_table_instances
-  User.destroy_all
   Item.destroy_all
+  User.destroy_all
+
 end
 
 def create_users
   20.times do
     User.create(first_name: Faker::Artist.name, last_name: Faker::Hacker.adjective,
-    email: Faker::Internet.free_email, adress: Faker::Address.street_address, phone: Faker::Number.leading_zero_number(10))
+    email: Faker::Internet.free_email, adress: Faker::Address.street_address, phone: Faker::Number.leading_zero_number(10), password: "blablabla")
   end
 end
 
@@ -33,4 +34,4 @@ end
 
 perfom
 
-puts "Seed Done !! :)"
+puts "Seed Done !! 😏"
