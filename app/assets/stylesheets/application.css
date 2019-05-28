@@ -57,9 +57,9 @@ footer a{
 	border-radius: 3px;
 	padding: 20px;
 	width: 350px;
-	height: 530px;
+	height: 450px;
 	margin-left: 35%;
-	margin-top: 5%;
+	margin-top: 150px;
 	margin-bottom: 5%;
 }
 #logoNav {
@@ -75,7 +75,7 @@ footer a{
 	padding: 20px;
 	width: 350px;
 	margin-left: 35%;
-	margin-top: 2%;
+	margin-top: 150px;
 	margin-bottom: 2%;
 }
 
@@ -126,8 +126,11 @@ footer a{
 #footer{
 	background-color: #333;
 	height: 140px;
+<<<<<<< HEAD
 	position: bottom;
 	position: sticky;
+=======
+>>>>>>> 24d864e8a3dad9659daf11796dabf5b41481ed49
 
 
 }
