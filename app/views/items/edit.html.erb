@@ -1,0 +1,26 @@
+<br><br><br>
+<div class="form-groupe mx-auto mb-3" style="max-width: 600px;">
+  <h3>Update Item Details</h3>
+
+
+  <%= form_for @item do |f| %>
+    <div class="form-group">
+      <label for="formGroupExampleInput">Example label</label>
+      <input type="text" class="form-control" id="formGroupExampleInput" placeholder=<%= f.text_field :name %>
+    </div>
+    <div class="form-group">
+      <label for="formGroupExampleInput2">Another label</label>
+      <input type="text" class="form-control" id="formGroupExampleInput2" placeholder=<%= f.text_field :description %>
+    </div>
+    <div class="form-group">
+      <label for="formGroupExampleInput2">Another label</label>
+      <input type="text" class="form-control" id="formGroupExampleInput2" placeholder=<%= f.text_field :price %>
+    </div>
+    <div class="form-group">
+      <label for="formGroupExampleInput2">Another label</label>
+      <input type="text" class="form-control" id="formGroupExampleInput2" placeholder=<%= f.text_field :image_url %>
+    </div>
+
+    <%= f.submit "Modifier" %>
+    <% end %>
+</div>
