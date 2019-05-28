@@ -1,57 +1,60 @@
-<!DOCTYPE html>		
-<html>		
-<head>		
-	<link rel="stylesheet" type="text/css" href="style.css">		
-			<nav class="navbar navbar-expand-lg navbar-light" id="navColorBg">		
-  					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">		
-    				<span class="navbar-toggler-icon"></span>		
-  					</button>		
-  				<div class="collapse navbar-collapse" id="navbarTogglerDemo01">		
-    				<a class="navbar-brand" href="#"><img id="logoNav" src="https://zupimages.net/up/19/22/qauj.png" width="200"></a>		
-    				<ul class="navbar-nav ml-auto mt-2 mt-lg-2 justify-content-right">		
-      					<li class="nav-item active">
-        					<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-     					</li>
-      					<li class="nav-item active">
-        				<a class="nav-link" href="<%= root_path %>">Products</a>
-      					</li>
-      					<li class="nav-item active">
-        					<a class="nav-link " href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Panier</a>
-      					</li>
-                <li class="nav-item active">
-                  <% if user_signed_in? %>
-                  <!-- Dropdown when logged in -->
-                    <div class="btn-group dropleft">
-                      <a class="btn dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Account </a>
-                    <div class="dropdown-menu">
-                      <a class="dropdown-item" href="<%=  %>"> Profil </a>
-                        <%= link_to "Se deconnecter", destroy_user_session_path , method: 'delete', class: "dropdown-item" %>                    
-                        <!-- Dropdown Divider -->
-                    <div class="dropdown-divider"></div>
-                      <a class="dropdown-item" href="#"> On verra !!! </a>
-                    </div>
+<nav class="navbar fixed-top navbar-expand-lg navbar-light" id="navColorBg">		
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">		
+  <span class="navbar-toggler-icon"></span>		
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">		
+    <a class="navbar-brand" href="#">
+      <img id="logoNav" src="https://zupimages.net/up/19/22/qauj.png" width="200">
+    </a>		
+    <ul class="navbar-nav ml-auto mt-2 mt-lg-2 justify-content-right">		
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+     	</li>
+      <li class="nav-item active">
+        <a class="nav-link" href="<%= root_path %>">Products</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link " href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Panier
+        </a>
+      </li>
+      <li class="nav-item active">
+<!-- Dropdown when logged in -->
+<% if user_signed_in? %>
+
+
+        <!-- DIV PAS FERMEE --> <div class="btn-group dropleft">
+          <a class="btn dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Account 
+          </a>
+          <div class="dropdown-menu">
+          <a class="dropdown-item" href="<%= #????? %>"> 
+            Profil 
+          </a>
+          <%= link_to "Se deconnecter", destroy_user_session_path , method: 'delete', class: "dropdown-item" %>                    
+<!-- Dropdown Divider -->
+          <div class="dropdown-divider">
+            <!-- DIV Sert à rien -->
+          </div>
+            <a class="dropdown-item" href="#"> On verra !!! </a>
+          </div>
                   
-                  <% else %>
+<% else %>
+<!-- Dropdown when logged out -->
 
-                  <!-- Dropdown when logged out -->
-
-                  <div class="btn-group dropleft">
-                    <a class="btn dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Connectez-vous </a>
-                  <div class="dropdown-menu">
-                    <a class="dropdown-item" href="<%= new_user_session_path %>">Log In </a>
-                    <a class="dropdown-item" href="<%= new_user_registration_path %>">Sign Up</a>
-                    <!-- Dropdown Divider -->
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#"> On verra !!! </a>
-                  </div>
-                </li>
-    				</ul>
+          <div class="btn-group dropleft">
+            <a class="btn dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Connectez-vous 
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="<%= new_user_session_path %>">Log In </a>
+              <a class="dropdown-item" href="<%= new_user_registration_path %>">Sign Up</a>
+<!-- Dropdown Divider -->
+              <div class="dropdown-divider">
+                <!-- DIV Sert à rien -->
+              </div>
+                <a class="dropdown-item" href="#"> On verra !!! </a>
+              </div>
+      </li><!-- Correspond à quoi ? -->
+    </ul><!-- Correspond à quoi ? -->
   				</div>
-			</nav>
+</nav>
        <% end %>
-       <br>
-
-
-
- </head>		
-</html>
