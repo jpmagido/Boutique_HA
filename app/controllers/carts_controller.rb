@@ -8,7 +8,7 @@ class CartsController < ApplicationController
 
 
 	def index
-	
+
 		@items = []
 		Cart.all.each { |i|
 			@items << Item.find(i.item_id)
