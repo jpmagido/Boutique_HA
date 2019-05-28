@@ -18,12 +18,17 @@
   </head>
 
   <body>
-  <%= render 'layouts/navbar'  %>
+    <nav>
+      <%= render 'layouts/navbar'  %>
+    </nav>
+  
     <%= yield %>
+
+    <footer>
+      <%= render 'layouts/footer' %>
+    </footer>
   </body>
-  <footer>
-    <%= render 'layouts/footer' %>
-  </footer>
+  
 </html>
 
 

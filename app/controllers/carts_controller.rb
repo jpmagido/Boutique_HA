@@ -8,7 +8,7 @@ class CartsController < ApplicationController
 
 
 	def index
-		@cart = Cart.find(current_user.id) 
+	
 		@items = []
 		Cart.all.each { |i|
 			@items << Item.find(i.item_id)
