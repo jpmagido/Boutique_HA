@@ -26,7 +26,7 @@ footer a{
 	border: white solid;
 	border-radius: 10px, 5px, 10px, 5px;
 	width: 50rem;
-	height: 20rem;
+	height: 10rem;
 	text-align: center;
 	margin-left: 20%;
 	margin-top: 10%;
@@ -60,6 +60,7 @@ footer a{
 	height: 530px;
 	margin-left: 35%;
 	margin-top: 5%;
+	margin-bottom: 5%;
 }
 #logoNav {
 	width: 170px;
@@ -75,6 +76,7 @@ footer a{
 	width: 350px;
 	margin-left: 35%;
 	margin-top: 2%;
+	margin-bottom: 2%;
 }
 
 #logo-1{
