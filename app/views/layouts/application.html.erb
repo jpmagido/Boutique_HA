@@ -17,16 +17,22 @@
   
   </head>
 
+  <header>
+    <% if user_signed_in? %>
+      <%= render 'layouts/navbar_in'  %>
+    <% else %>
+      <%= render 'layouts/navbar_out'  %>
+    <% end %>
+  </header>
+
   <body>
-  <nav>  
-  <%= render 'layouts/navbar'  %>
-  </nav><br><br>
     <%= yield %>
-  
-  <br><footer>
+  </body>
+
+  <footer>
     <%= render 'layouts/footer' %>
   </footer>
-</body>
+
 </html>
 
 
