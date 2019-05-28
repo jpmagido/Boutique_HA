@@ -9,44 +9,48 @@
   				<div class="collapse navbar-collapse" id="navbarTogglerDemo01">		
     				<a class="navbar-brand" href="#"><img id="logoNav" src="https://zupimages.net/up/19/22/qauj.png" width="200"></a>		
     				<ul class="navbar-nav ml-auto mt-2 mt-lg-2 justify-content-right">		
+      					<li class="nav-item active">
+        					<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+     					</li>
+      					<li class="nav-item active">
+        				<a class="nav-link" href="<%= root_path %>">Products</a>
+      					</li>
+      					<li class="nav-item active">
+        					<a class="nav-link " href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Panier</a>
+      					</li>
+                <li class="nav-item active">
+                  <% if user_signed_in? %>
+                  <!-- Dropdown when logged in -->
+                    <div class="btn-group dropleft">
+                      <a class="btn dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Account </a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="<%=  %>"> Profil </a>
+                        <%= link_to "Se deconnecter", destroy_user_session_path , method: 'delete', class: "dropdown-item" %>                    
+                        <!-- Dropdown Divider -->
+                    <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="#"> On verra !!! </a>
+                    </div>
+                  
+                  <% else %>
 
-       					<li class="nav-item active">		
-        					<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>		
-     					</li>		
-      					<li class="nav-item active">		
-        				<a class="nav-link" href="<%= root_path %>">Products</a>		
-      					</li>		
-      					<li class="nav-item active">		
-        					<a class="nav-link " href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Panier</a>		
-      					</li>		
-                <li class="nav-item active">		
-                  <% if user_signed_in? %>		
-                  <!-- Dropdown when logged in -->		
-                                    <div class="btn-group dropleft">		
-                    <a class="btn dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Account </a>		
-                  <div class="dropdown-menu">		
-                    <a class="dropdown-item" href="<%=  %>"> Profil </a>		
-                    <%= link_to "Se deconnecter", destroy_user_session_path , method: 'delete', class: "dropdown-item" %>                    <!-- Dropdown Divider -->		
-                    <div class="dropdown-divider"></div>		
-                    <a class="dropdown-item" href="#"> On verra !!! </a>		
-                  </div>		
-                  <% else %>		
-                  <!-- Dropdown when logged out -->		
-                  <div class="btn-group dropleft">		
-                    <a class="btn dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Connect </a>		
-                  <div class="dropdown-menu">		
-                    <a class="dropdown-item" href="<%= new_user_session_path %>">Log In </a>		
-                    <a class="dropdown-item" href="<%= new_user_registration_path %>">Sign Up</a>		
-                    <!-- Dropdown Divider -->		
-                    <div class="dropdown-divider"></div>		
-                    <a class="dropdown-item" href="#"> On verra !!! </a>		
-                  </div>		
-                </li>		
-    				</ul>		
-  				</div>		
-			</nav>		
-       <% end %>		
-       <br>		
+                  <!-- Dropdown when logged out -->
+
+                  <div class="btn-group dropleft">
+                    <a class="btn dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Connectez-vous </a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="<%= new_user_session_path %>">Log In </a>
+                    <a class="dropdown-item" href="<%= new_user_registration_path %>">Sign Up</a>
+                    <!-- Dropdown Divider -->
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#"> On verra !!! </a>
+                  </div>
+                </li>
+    				</ul>
+  				</div>
+			</nav>
+       <% end %>
+       <br>
+
 
 
  </head>		
