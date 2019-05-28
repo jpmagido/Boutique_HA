@@ -14,18 +14,29 @@
         					<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
      					</li>
       					<li class="nav-item active">
-        				<a class="nav-link" href="#">Products</a>
+        				<a class="nav-link" href="<%= root_path %>">Products</a>
       					</li>
       					<li class="nav-item active">
-        					<a class="nav-link " href="#"></a>
+        					<a class="nav-link " href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Panier</a>
       					</li>
                 <li class="nav-item active">
-                  <!-- Default dropleft button -->
-                  <div class="btn-group dropleft">
-                    <a class="btn dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Log In </a>
+                  <% if user_signed_in? %>
+                  <!-- Dropdown when logged in -->
+                                    <div class="btn-group dropleft">
+                    <a class="btn dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Account </a>
                   <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">Log In </a>
-                    <a class="dropdown-item" href="#">Sign Up</a>
+                    <a class="dropdown-item" href="<%=  %>"> Profil </a>
+                    <%= link_to "Se deconnecter", destroy_user_session_path , method: 'delete', class: "dropdown-item" %>                    <!-- Dropdown Divider -->
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#"> On verra !!! </a>
+                  </div>
+                  <% else %>
+                  <!-- Dropdown when logged out -->
+                  <div class="btn-group dropleft">
+                    <a class="btn dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Connect </a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="<%= new_user_session_path %>">Log In </a>
+                    <a class="dropdown-item" href="<%= new_user_registration_path %>">Sign Up</a>
                     <!-- Dropdown Divider -->
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="#"> On verra !!! </a>
@@ -33,7 +44,10 @@
                 </li>
     				</ul>
   				</div>
-			</nav><br>
+			</nav>
+       <% end %>
+       <br>
 
+     
 </head>
 </html>
