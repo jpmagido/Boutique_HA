@@ -126,6 +126,11 @@ footer a{
 #footer{
 	background-color: #333;
 	height: 140px;
+<<<<<<< HEAD
+	position: bottom;
+	position: sticky;
+=======
+>>>>>>> 24d864e8a3dad9659daf11796dabf5b41481ed49
 
 
 }
@@ -210,9 +215,6 @@ footer a{
 }
 .shopping-cart {
     margin-top: 20px;
-<<<<<<< HEAD
-}
-=======
 }
 
 /********** NAVARB ***********/
@@ -258,4 +260,3 @@ footer a{
 #navColorBg {
 	background: #FFEEDD;
 }
->>>>>>> delivery-ro
