@@ -1,10 +1,7 @@
 class CartsController < ApplicationController
+	before_action :authenticate_user!
 
-	def new
-		
-	end
-
-	def show
+	def index
 		@cart = Cart.find(current_user.id) 
 		@items = []
 		Cart.all.each { |i|
@@ -14,7 +11,7 @@ class CartsController < ApplicationController
 
 
 	def create
-		
+		@cart = []
 	end
 
 
@@ -23,7 +20,7 @@ class CartsController < ApplicationController
 	end
 
 	def update
-		
+		@cart << Cart.new(user_id: current_user.id, item_id: params[:id]) 
 	end
 
 	def destroy
