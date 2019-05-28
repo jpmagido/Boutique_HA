@@ -1,6 +1,12 @@
 class CartsController < ApplicationController
 	before_action :authenticate_user!
 
+
+	def new
+		
+	end
+
+
 	def index
 		@cart = Cart.find(current_user.id) 
 		@items = []
