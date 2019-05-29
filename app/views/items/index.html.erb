@@ -1,18 +1,29 @@
 <div class="container ">
-<div class="row d-flex justify-content-around ">
-  <% @items.each do |item| %>
-<div class="card mb-3" style="width: 21rem;">
-  <img src="<%= item.image_url %>" class="card-img-top" alt="...">
-  <div class="card-body ">
-    <h5 class="card-title"><%= link_to item.name, item_path(item) %></h5>
-    <p class="card-text"><%= item.description %>.</p>
-    <p class="card-price"><%= item.price %>$</p>
-    <a href="#" class="btn btn-primary btn-sm">Add to Cart</a>
-  </div>
+	<div class="row d-flex justify-content-around ">
+		 <% @items.each do |item| %>
+		<div class="card mb-3" style="width: 21rem;">
+		  <img src="<%= item.image_url %>" class="card-img-top" alt="...">
+		  <div class="card-body ">
+		    <h5 class="card-title"><%= link_to item.name, item_path(item) %></h5>
+		    <p class="card-text"><%= item.description %>.</p>
+		    <p class="card-price"><%= item.price %>$</p>
+		    <a href="/" class="btn btn-primary btn-sm">Add to Cart</a>
+		    <%= form_tag url_for(@cart), action: "update", method: "patch", class: "btn btn-primary btn-sm" do%>
+			    <%= submit_tag("Add to cart") %>
+			    <% end %>
+
+			<%= form_tag "/carts", method: "index" do %>
+	            <button type="button" class="btn btn-primary btn-sm" role="submit">
+	                <a href="/carts" > Add to Cart</a>
+	            </button>
+	            <% end %>
+			
+		  </div>
+		</div>
+		<% end %>
+	</div>
+	<div class="actions mx-auto mb-3" style="max-width: 500px;">
+		
+	</div>
 </div>
-<% end %>
-</div>
-<div class="actions mx-auto mb-3" style="max-width: 500px;">
-<%= link_to "Add a new item", new_item_path %>
-</div>
-</div>
+

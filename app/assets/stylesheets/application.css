@@ -31,7 +31,10 @@ footer {
 	width: 100% ;
 }
 
-
+.container {
+	margin-top: 10%;
+	margin-bottom: 10%;
+}
 
 
 .form-login {

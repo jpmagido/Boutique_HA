@@ -10,14 +10,14 @@ class CartsController < ApplicationController
 	def index
 
 		@items = []
-		Cart.all.each { |i|
+		@cart.all.each { |i|
 			@items << Item.find(i.item_id)
 		}
 	end
 
 
 	def create
-		@cart = []
+		return @cart = []
 	end
 
 
@@ -27,6 +27,7 @@ class CartsController < ApplicationController
 
 	def update
 		@cart << Cart.new(user_id: current_user.id, item_id: params[:id]) 
+		flash[:success] = "good"
 	end
 
 	def destroy

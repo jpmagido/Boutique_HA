@@ -2,6 +2,7 @@ class ItemsController < ApplicationController
 
 	def index
 		@items = Item.all
+		@cart = CartsController.create 
 	end
 
 	def show
