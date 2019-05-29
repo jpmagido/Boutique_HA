@@ -13,6 +13,8 @@ gem 'stripe'
 
 gem 'paypal-sdk-rest'
 
+# Gem Amazon S3
+gem "aws-sdk-s3", require: false
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
