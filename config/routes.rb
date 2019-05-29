@@ -1,20 +1,17 @@
 Rails.application.routes.draw do
 
-  get 'static_pages/show'
-  get 'pages/static_lp'
-  root to: "items#index"
-  devise_for :users
-
-  resources :items
-  
-  resources :users, only: [:show]
-
-resources :users, only: [:show] do
-	resources :avatar, only: [:create]
-end
-resources :carts
-resources :items
-resources :charges
+	get 'static_pages/show'
+	get 'pages/static_lp'
+	root to: "pages#static_lp"
+	devise_for :users
+	resources :items
+	resources :users, only: [:show]
+	resources :users, only: [:show] do
+		resources :avatar, only: [:create]
+		end
+	resources :carts
+	resources :items
+	resources :charges
 
 
 

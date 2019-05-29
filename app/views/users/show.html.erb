@@ -1,4 +1,4 @@
-<p>Bienvenue sur la page d'ajout d'un avatar pour le User portant l'id : <%=@user%></p>
+<p>Bienvenue <%=@user.first_name%> <%=@user.last_name%></p>
 <!------ Include the above in your HEAD tag ---------->
 <div class="form-profil">
     <div class="container">
@@ -10,21 +10,17 @@
                             <% end %>
                         </div>
                         <div class="col">
-                            <h4><%=@user.email%>  <%=@user.last_name%></h4>
-                            <small><cite title="San Francisco, USA">San Francisco, USA <i class="glyphicon glyphicon-map-marker"><br>
-                            </i></cite></small>
+                            <h4> <i class="fas fa-user fa-2x"></i> <%=@user.email%>  <%=@user.last_name%> </h4>
+                            <i class="fas fa-globe-europe fa-2x"></i><small><cite title="San Francisco, USA"> San Francisco, USA </cite></small>
                             <p>
-                                <i class="glyphicon glyphicon-envelope"></i>email@example.com
+                                <i class="fas fa-envelope-open fa-2x"></i> <%=@user.email%>
                                 <br />
-                                <i class="glyphicon glyphicon-globe"></i><a href="http://www.jquery2dotnet.com">www.jquery2dotnet.com</a>
+                                <i class="fas fa-address-card fa-2x"></i> Adress User</a>
                                 <br />
-                                <i class="glyphicon glyphicon-gift"></i>June 02, 1988</p>
+                                <i class="fas fa-mobile-alt fa-2x"></i> Phone User</p>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-</div>
