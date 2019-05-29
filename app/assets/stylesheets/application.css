@@ -278,3 +278,30 @@ footer a{
 	width: 50%;
 	
 }
+
+
+/********** BANNER 2 ***********/
+
+#div-title-carr{
+	font-size: 70px;
+	font-weight: bold;
+	font-family: OCR A Std, monospace;
+	margin-bottom: 120px;
+	margin-top: 66px;
+	margin-bottom: 120px;
+	
+}
+
+#p-1{
+	position: relative;
+	padding-top: 5%;
+	z-index: 100;
+	text-align: center;
+	min-width: 800px;
+	
+}
+
+#img-10{
+	position: absolute;
+	left: 0;
+}
