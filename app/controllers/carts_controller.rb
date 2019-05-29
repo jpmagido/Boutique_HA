@@ -10,6 +10,7 @@ class CartsController < ApplicationController
 	def index
 
 		@items = []
+		@cart = Cart.all
 		@cart.all.each { |i|
 			@items << Item.find(i.item_id)
 		}
@@ -17,7 +18,7 @@ class CartsController < ApplicationController
 
 
 	def create
-		return @cart = []
+		@cart = []
 	end
 
 

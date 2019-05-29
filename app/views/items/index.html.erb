@@ -8,7 +8,7 @@
 		    <p class="card-text"><%= item.description %>.</p>
 		    <p class="card-price"><%= item.price %>$</p>
 		    <a href="/" class="btn btn-primary btn-sm">Add to Cart</a>
-		    <%= form_tag url_for(@cart), action: "update", method: "patch", class: "btn btn-primary btn-sm" do%>
+		    <%= form_tag url_for(@item), action: "update", method: "patch", class: "btn btn-primary btn-sm" do%>
 			    <%= submit_tag("Add to cart") %>
 			    <% end %>
 

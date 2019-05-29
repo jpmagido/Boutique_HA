@@ -9,13 +9,13 @@
     </a>
     <ul class="navbar-nav ml-auto mt-2 mt-lg-2 justify-content-right"> 
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home</a>
+        <a class="nav-link" href="<%= root_path %>">Home</a>
       </li>
       <li class="nav-item active">
         <a class="nav-link" href="<%= root_path %>">Products</a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link " href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Panier
+        <a class="nav-link " href="/carts"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Panier
         </a>
       </li>
       <li class="nav-item active">
@@ -23,7 +23,7 @@
           <a class="btn dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Account 
           </a>
           <div class="dropdown-menu">
-          <a class="dropdown-item" href="#"> 
+          <a class="dropdown-item" href="/static_page/show"> 
             Profil 
           </a>
           <%= link_to "Se deconnecter", destroy_user_session_path , method: 'delete', class: "dropdown-item" %> 
