@@ -1,9 +1,25 @@
-<h3>Create an Item</h3>
-<%= form_with model: @item do |form| %>
-<%= form.text_field :name, placeholder: "name" %>
-<%= form.text_field :description, placeholder: "description" %>
-<%= form.text_field :price, placeholder: "price" %>
-<%= form.text_field :image_url, placeholder: "Image url" %>
+<div class="form-groupe mx-auto mb-3" style="max-width: 600px;">
+  <h3>Create Item </h3>
 
-  <%= form.submit %>
-<% end %>
+
+  <%= form_for @item do |f| %>
+    <div class="form-group">
+      <label for="formGroupExampleInput">Name</label>
+      <input type="text" class="form-control" id="formGroupExampleInput" placeholder=<%= f.text_field :name %>
+    </div>
+    <div class="form-group">
+      <label for="formGroupExampleInput2">Description</label>
+      <input type="text" class="form-control" id="formGroupExampleInput2" placeholder=<%= f.text_field :description %>
+    </div>
+    <div class="form-group">
+      <label for="formGroupExampleInput2">Price</label>
+      <input type="text" class="form-control" id="formGroupExampleInput2" placeholder=<%= f.text_field :price %>
+    </div>
+    <div class="form-group">
+      <label for="formGroupExampleInput2">Image_url</label>
+      <input type="text" class="form-control" id="formGroupExampleInput2" placeholder=<%= f.text_field :image_url %>
+    </div>
+
+    <%= f.submit "Create" %>
+    <% end %>
+</div>

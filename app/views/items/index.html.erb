@@ -1,18 +1,38 @@
-<div class="container ">
-<div class="row d-flex justify-content-around ">
-  <% @items.each do |item| %>
-<div class="card mb-3" style="width: 21rem;">
-  <img src="<%= item.image_url %>" class="card-img-top" alt="...">
-  <div class="card-body ">
-    <h5 class="card-title"><%= link_to item.name, item_path(item) %></h5>
-    <p class="card-text"><%= item.description %>.</p>
-    <p class="card-price"><%= item.price %>$</p>
-    <a href="#" class="btn btn-primary btn-sm">Add to Cart</a>
+
+
+<!--  intro parfums -->
+<div class="container">
+  <div style="d-flex justify-content-center mb-6  style="max-width: 400px;">
+
+    <h2 class="text-center">Parfums</h2>
+    <p class="text-center">Amusons-nous des codes, imaginons des personnalités, fantasmons des univers.
+      Mais parfumons nous de ce qui nous sublime.
+
+      Flacons aux courbes épurées, sentiment d'essentiel. Le prénom gravé embrasse la transparence du verre. Luxe aux notes olfactives mutines ; appréciation instinctive. Antonius dévoile des eaux de parfum éclatantes et singulières. Attraction vers l'évidence.
+    </p>
   </div>
 </div>
-<% end %>
+
+<!-- Cards -->
+<div class="container ">
+  <div class="row d-flex justify-content-around ">
+
+      <% @items.each do |item| %>
+    <div class="card mb-3" style="width: 21rem;">
+      <img src="<%= item.image_url %>" class="card-img-top" alt="...">
+      <div class="card-body ">
+        <h5 class="card-title"><%= link_to item.name, item_path(item) %></h5>
+        <p class="card-text"><%= item.description %>.</p>
+        <p class="card-price"><%= item.price %>$</p>
+        <a href="#" class="btn btn-primary btn-sm">Add to Cart</a>
+      </div>
+    </div>
+      <% end %>
+  </div>
 </div>
-<div class="actions mx-auto mb-3" style="max-width: 500px;">
-<%= link_to "Add a new item", new_item_path %>
-</div>
-</div>
+<!-- Add Item Link -->
+  <div style="height: 100px;  mb-3">
+    <div class="mx-auto d-flex justify-content-around" style="width: 200px;"">
+        <button type="button" class="btn btn-link"><%= link_to "Add a new item", new_item_path %></button>
+    </div>
+  </div>
