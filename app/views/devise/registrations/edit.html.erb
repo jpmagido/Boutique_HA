@@ -1,19 +1,25 @@
 <div class="form-edit">
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
 <div class="container">
     <h1>Edit Profile</h1>
     <hr>
   <div class="row align-items-center">
       <!-- left column -->
       <div class="col-md-4">
-        <div class="text-center">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIpGsX3nLD9_QICrhvqI-BweSdasdeiarv4p25GoNQulu81MJ_" class="avatar img-circle" alt="avatar">
-          <h6>Upload a different photo...</h6>
+        <div class="text-left">
+          <h3>Avatar actuel</h3>
+<%if current_user.avatar.attached?%>
+  <%= image_tag current_user.avatar, alt: 'avatar' %>
+<%end%>
           
-          <input type="file" class="form-control">
+          <h6>Upload a different photo...</h6>
+<%= form_tag user_avatar_index_path(current_user), multipart: true do %>
+  <%= file_field_tag :avatar %>
+  <%= submit_tag "mettre à jour" %>
+<% end %>
         </div>
       </div>
-      
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+ 
       <!-- edit form column -->
       <div class="col-md-8 personal-info">
         <div class="alert alert-info alert-dismissable">
@@ -76,3 +82,4 @@
 </div>
 <hr>
 </div>
+
