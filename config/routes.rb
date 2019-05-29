@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  get 'static_pages/show'
+
+
   root to: "items#index"
   devise_for :users
 

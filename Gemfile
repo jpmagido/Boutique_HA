@@ -14,6 +14,7 @@ gem 'stripe'
 gem 'paypal-sdk-rest'
 
 
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
 # Use postgresql as the database for Active Record
@@ -60,6 +61,9 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'better_errors'
+  gem "binding_of_caller"
+  gem 'letter_opener'
+
 end
 
 group :test do
