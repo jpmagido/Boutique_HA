@@ -16,3 +16,7 @@
 //= require_tree .
 
 
+// lien Google Bouton
+      function B1() {
+      window.open('https://www.google.com/');
+      }

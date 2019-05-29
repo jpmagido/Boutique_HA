@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
 
-	get 'static_pages/show'
+	get 'pages/landing_page'
 	get 'pages/static_lp'
-	root to: "pages#static_lp"
+	root to: "pages#landing_page"
 	devise_for :users
 	resources :items
 	resources :users, only: [:show]
@@ -12,6 +12,7 @@ Rails.application.routes.draw do
 	resources :carts
 	resources :items
 	resources :charges
+
 
 
 

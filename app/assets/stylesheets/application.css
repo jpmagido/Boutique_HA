@@ -259,20 +259,25 @@ footer a{
 	height: 40px;
 }
 #navColorBg {
-	background: #FFEEDD;
+	background: black;
 }
+
+#navColorBg a{
+	color: #E3E3E3;
+}
+
+
 
 /* BANNIERE Landing Page - Carousel */
 
 .carousel {
-	margin-top: 60px;
-  background-color: black;
+
+ background-color: black;
 
 }
 
 /*/ CARDS Fragance Landing Page /*/
 #div-container-fragance{
-
 	display: flex;
 	justify-content: space-around;
 	height: 600px;
@@ -320,7 +325,7 @@ footer a{
   padding: 2px 16px;
 }
 .div-title{
-	margin: 50px 0 50px 0;
+	margin: 150px 0 50px 0;
 	text-align: center;
 	font-size: xx-large;
 	font-weight: lighter;
