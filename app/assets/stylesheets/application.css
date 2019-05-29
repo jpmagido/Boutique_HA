@@ -22,6 +22,18 @@ button:focus {
 footer a{
 	color: white;
 }
+
+footer {
+	background-color: #333;
+	height: 140px;
+	bottom: 0;
+	position: bottom;
+	width: 100% ;
+}
+
+
+
+
 .form-login {
 	border: white solid;
 	border-radius: 10px, 5px, 10px, 5px;
@@ -126,8 +138,9 @@ footer a{
 #footer{
 	background-color: #333;
 	height: 140px;
+	bottom: 0;
 	position: relative;
-	bottom: 100;
+	width: 100% ;
 }
 
 #div-footer-right{
@@ -210,4 +223,47 @@ footer a{
 }
 .shopping-cart {
     margin-top: 20px;
+}
+
+#btnPink {
+	display:block;
+	width:100px;
+	line-height:30px;
+	text-align:center;
+	font-family: Arial,sans-serif;
+    font-size: 1.2em;
+	vertical-align:middle;
+	color:white;
+	border-radius: 8px;
+	background: #FFB6C1;
+	background: linear-gradient( #cf6a87, #FFC0CB);
+	text-shadow: 0px 1px 0px rgba( 255, 255, 255, 0.2);
+	box-shadow: 0 0 5px rgba( 0, 0, 0, 0.5);
+	box-shadow: 0 -1px 0 rgba( 255, 255, 255, 0.4);
+	text-decoration:none;
+}
+#btnPink:hover{
+     color: white;
+     background: #FFC0CB;
+     background: linear-gradient( #FFC0CB, #cf6a87);
+}
+#btnPink:active{
+     color: white;
+     background: #FF69B4;
+     background: linear-gradient( #FF69B4, #cf6a87);
+     box-shadow: 1px 1px 10px black inset,
+                 0 1px 0 rgba( 255, 255, 255, 0.4);
+}
+#btnPinkLogin:hover {
+	background: white;
+	border-radius: 100%;
+
+}
+#logoNav {
+	background-size: cover;
+	width: 100px;
+	height: 40px;
+}
+#navColorBg {
+	background: #FFEEDD;
 }
