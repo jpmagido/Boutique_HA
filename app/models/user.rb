@@ -7,6 +7,7 @@ class User < ApplicationRecord
 
    has_many :carts
    has_many :items
+   has_one_attached :avatar
    
 
    #MAILER 
