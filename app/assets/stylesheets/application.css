@@ -69,9 +69,9 @@ footer {
 	border-radius: 3px;
 	padding: 20px;
 	width: 350px;
-	height: 530px;
+	height: 450px;
 	margin-left: 35%;
-	margin-top: 5%;
+	margin-top: 150px;
 	margin-bottom: 5%;
 }
 #logoNav {
@@ -87,7 +87,7 @@ footer {
 	padding: 20px;
 	width: 350px;
 	margin-left: 35%;
-	margin-top: 2%;
+	margin-top: 150px;
 	margin-bottom: 2%;
 }
 
@@ -138,9 +138,12 @@ footer {
 #footer{
 	background-color: #333;
 	height: 140px;
-	bottom: 0;
-	position: relative;
-	width: 100% ;
+
+
+	position: bottom;
+	position: sticky;
+
+
 }
 
 #div-footer-right{
@@ -148,8 +151,8 @@ footer {
 	flex-direction: column;
 	align-self: flex-end;
 
-
 }
+
 #div-footer-bot{
 	margin-top: 20px;
 }
@@ -225,6 +228,7 @@ footer {
     margin-top: 20px;
 }
 
+
 #btnPink {
 	display:block;
 	width:100px;
@@ -266,4 +270,6 @@ footer {
 }
 #navColorBg {
 	background: #FFEEDD;
+
 }
+
