@@ -7,6 +7,8 @@ class User < ApplicationRecord
 
    has_many :carts
    has_many :items
+   has_many :orders
+   has_many :join_table_orders_items
    
 
    #MAILER 
