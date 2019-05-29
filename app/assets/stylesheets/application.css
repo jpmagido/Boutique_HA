@@ -239,6 +239,7 @@ footer a{
      color: white;
      background: #FFC0CB;
      background: linear-gradient( #FFC0CB, #cf6a87);
+
 }
 #btnPink:active{
      color: white;
@@ -266,7 +267,7 @@ footer a{
 .carousel {
 	margin-top: 60px;
   background-color: black;
-	
+
 }
 
 /*/ CARDS Fragance Landing Page /*/
@@ -330,7 +331,7 @@ footer a{
 
 .div-text-france{
 
-	height: 690px;
+	height: 700px;
 	background-image: url("https://s3.amazonaws.com/peoplepng/wp-content/uploads/2018/03/21070832/Free-Paris-PNG-Picture.png");
 	background-color: #E6E6E6;
 	background-repeat: no-repeat;
@@ -339,7 +340,7 @@ footer a{
 
 .content-a-propos{
 	padding: 90px 350px 90px 30px;
-	text-align: center;
+	text-align: justify;
 
 }
 .content-a-propos div{
@@ -351,4 +352,5 @@ footer a{
 	margin-bottom: 40px;
 	font-size: xx-large;
 	font-weight: lighter;
+	text-align: center;
 }
