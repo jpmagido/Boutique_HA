@@ -446,5 +446,6 @@ input {
 
 #img-10{
 	position: absolute;
-	left: 0;
+	height: 50%;
+	width: 100%;
 }
