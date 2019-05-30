@@ -267,7 +267,7 @@ footer a{
 
 	margin-top: 0px;
   background-color: black;
-	
+
 }
 
 /*/ CARDS Fragance Landing Page /*/
@@ -276,6 +276,8 @@ footer a{
 	display: flex;
 	justify-content: space-around;
 	height: 600px;
+
+
 }
 
 
@@ -321,6 +323,7 @@ footer a{
 .container {
   padding: 2px 16px;
 }
+
 .div-title{
 	margin: 50px 0 50px 0;
 	text-align: center;
@@ -332,7 +335,7 @@ footer a{
 
 .div-text-france{
 
-	height: 690px;
+	height: 700px;
 	background-image: url("https://s3.amazonaws.com/peoplepng/wp-content/uploads/2018/03/21070832/Free-Paris-PNG-Picture.png");
 	background-color: #E6E6E6;
 	background-repeat: no-repeat;
@@ -353,4 +356,51 @@ footer a{
 	margin-bottom: 40px;
 	font-size: xx-large;
 	font-weight: lighter;
+}
+/* FORM NEW/EDIT ITEM */
+
+.form-groupe {
+
+	height: 520px;
+}
+.form-groupe h3 {
+
+	text-align: center;
+	margin: 30px 0 30px 0;
+	font-size: xx-large;
+	font-weight: lighter;
+}
+.submit{
+	margin: 30px 250px 0 250px;
+	display: flex;
+	justify-content: center;
+	border: solid;
+	border-color: white;
+	border-radius: 8px;
+}
+input {
+	width: 590px;
+	height: 35px;
+	border-radius: 5px;
+}
+
+/* SHOW ITEM CARD */
+.card-item-show{
+
+
+	height: 520px;
+	width: 1200px;
+	margin-top: 30px;
+	padding-top: 40px;
+
+}
+.card-item-show h1{
+	font-size: xx-large;
+	font-weight: lighter;
+}
+
+.show{
+	border: 1px solid;
+	border-color: #E6E6E6;
+	box-shadow: 5px 5px #E6E6E6;
 }

@@ -1,25 +1,28 @@
 <div class="form-groupe mx-auto mb-3" style="max-width: 600px;">
-  <h3>Create Item </h3>
+  <h3>Create New Item </h3>
 
 
   <%= form_for @item do |f| %>
     <div class="form-group">
       <label for="formGroupExampleInput">Name</label>
-      <input type="text" class="form-control" id="formGroupExampleInput" placeholder=<%= f.text_field :name %>
+       <p><%= f.text_field :name %></p>
     </div>
     <div class="form-group">
       <label for="formGroupExampleInput2">Description</label>
-      <input type="text" class="form-control" id="formGroupExampleInput2" placeholder=<%= f.text_field :description %>
+      <p><%= f.text_field :description %></p>
     </div>
     <div class="form-group">
       <label for="formGroupExampleInput2">Price</label>
-      <input type="text" class="form-control" id="formGroupExampleInput2" placeholder=<%= f.text_field :price %>
+      <p><%= f.text_field :price %></p>
     </div>
     <div class="form-group">
       <label for="formGroupExampleInput2">Image_url</label>
-      <input type="text" class="form-control" id="formGroupExampleInput2" placeholder=<%= f.text_field :image_url %>
+      <p><%= f.text_field :image_url %></p>
     </div>
 
-    <%= f.submit "Create" %>
+    <div class="submit"><%= f.submit "Create" %></div>
+
+
     <% end %>
+
 </div>
