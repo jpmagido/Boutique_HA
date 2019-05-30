@@ -486,3 +486,16 @@ footer a:hover{
 	margin-top: 5px;
 
 }
+
+.div-button-spe{
+	margin-top: 10px;
+}
+
+
+.container-spe{
+	border: solid;
+	width: 200px;
+	margin: 200px 0 200px 20%;
+	padding: 15px; 
+
+}

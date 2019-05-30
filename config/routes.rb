@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
 
+
 	get 'pages/landing_page'
 	get 'pages/static_lp'
 	root to: "pages#landing_page"
@@ -13,11 +14,6 @@ Rails.application.routes.draw do
 	resources :carts
 	resources :items
 	resources :charges
-
-
-
-
-
 
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
