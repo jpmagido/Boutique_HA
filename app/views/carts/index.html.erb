@@ -26,12 +26,10 @@
                         </div>
                         <div class="col-12 col-sm-12 text-sm-center col-md-4 text-md-right row">
                             <div class="col-3 col-sm-3 col-md-6 text-md-right" style="padding-top: 5px">
-                                <h6><strong><%= item.price %><span class="text-muted">x</span></strong></h6>
+                                <h6><strong><%= item.price %><span class="text-muted">x1</span></strong></h6>
                             </div>
                             <div class="col-3 col-sm-3 col-md-3">
-                                <div class="quantity">
-                                    <input type="number" step="1" max="99" min="1" value="1" title="Qty" class="qty" size="4">
-                                </div>
+                                
                             </div>
                             <div class="col-2 col-sm-2 col-md-2 text-right">
 
@@ -67,8 +65,7 @@
                 <div class="pull-right">
                     <div class="pull-right">
                     <%= form_tag(cart_path(@cart), method: "patch") do%>
-                    
-                                
+                        
                                     
                                     <%= submit_tag "Update shopping cart", class: " btn btn-primary btn-sm"  %>
                                 
@@ -81,10 +78,20 @@
             <div class="card-footer">
 
                 <div class="pull-right" style="margin: 10px">
-                    <a href="" class="btn btn-success pull-right">Checkout</a>
+                    <%= form_tag(charges_path, method: 'post') do%>
+                        <input type="hidden" id="price" name="price" size="1" value="<%= price %>" />
+                        <input type="hidden" id="all_item" name="all_item" size="1" value="<%= @items %>" />
+                                    
+                                    <%= submit_tag "Checkout", class: "btn btn-success pull-right"  %>
+                                
+                                
+                            
+                   
                     <div class="pull-right" style="margin: 5px">
                         Total price: <b><%= price %>€</b>
+                        <% session[:price] = price %>
                     </div>
+                    <% end %>
                 </div>
             </div>
         </div>

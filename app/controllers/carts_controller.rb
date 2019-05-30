@@ -19,15 +19,19 @@ class CartsController < ApplicationController
 
 
 	def create
-		@cart = JoinTableCartsItem.new(cart_id: params[:user_id], item_id: params[:id].to_i) 
-		
-		if @cart.save
-			redirect_to '/carts'
-	    else
-	    	p @cart.errors.messages
-	    	p current_user.update(cart_id: Cart.last) 
-	    	p current_user.save
-	    end
+		if JoinTableCartsItem.where(cart_id: params[:user_id], item_id: params[:id].to_i).ids[0] == nil
+
+			@cart = JoinTableCartsItem.new(cart_id: params[:user_id], item_id: params[:id].to_i) 
+			
+			if @cart.save
+				redirect_to '/carts'
+		    else
+		    	p @cart.errors.messages
+		    	p current_user.update(cart_id: Cart.last) 
+		    	p current_user.save
+		    end
+
+		end
 
 	
 	end
@@ -52,6 +56,10 @@ class CartsController < ApplicationController
 	    else
 	    	p JoinTableCartsItem.destroy(cart_id: params[:user_id], item_id: params[:id].to_i).errors.messages
 	    end
+
+	end
+
+	def order
 
 	end
 	

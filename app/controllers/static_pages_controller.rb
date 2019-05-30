@@ -1,4 +1,9 @@
 class StaticPagesController < ApplicationController
-  def show
+  def order
+  	
+  	 
   end
+  	
+  	
+  
 end

@@ -1,11 +1,19 @@
 class ChargesController < ApplicationController
 
 	def new
+		@amount = Order.last.total_price
+
 	end
 
 	def create
 	  # Amount in cents
-	  @amount = 500
+	  if Order.where(user_id: current_user.id, total_price: params[:price]).last == nil
+  		o = Order.new(user_id: current_user.id, total_price: params[:price])
+  		o.save
+  		
+  	  end		
+  	 
+	  @amount = Order.last.total_price
 
 	  customer = Stripe::Customer.create({
 	    email: params[:stripeEmail],
@@ -23,6 +31,8 @@ class ChargesController < ApplicationController
 	  flash[:error] = e.message
 	  redirect_to new_charge_path
 	end
+
+	
 	
 end
 
