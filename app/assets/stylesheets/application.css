@@ -85,7 +85,7 @@ footer a{
 #logo-1{
 	display: flex;
 	justify-content: center;
-	
+
 
 }
 
@@ -174,7 +174,7 @@ footer a{
     font-size: 20px;
     border: 0;
     outline: 0;
-    background-color: #F6F6F6
+    background-color: #F6F6F6;
 }
 
 .quantity input.qty {
@@ -332,7 +332,7 @@ footer a{
 }
 
 .div-title{
-	margin: 150px 0 50px 0;
+	margin: 70px 0 50px 0;
 	text-align: center;
 	font-size: xx-large;
 	font-weight: lighter;
@@ -407,10 +407,10 @@ input {
 	font-weight: lighter;
 }
 
-.show{
+.show:hover{
 	border: 1px solid;
 	border-color: #E6E6E6;
-	box-shadow: 5px 5px #E6E6E6;
+	box-shadow: 20px 20px 50px #E6E6E6;
 }
 
 .form-profil {
@@ -434,12 +434,13 @@ input {
 	font-family: OCR A Std, monospace;
 	margin-bottom: 120px;
 	margin-top: 66px;
-	margin-bottom: 120px;
+	margin-bottom: 40px;
 
 }
 
 #p-1{
-	position: relative;
+	border: solid;
+	position: fixed;
 	padding-top: 5%;
 	z-index: 100;
 	text-align: center;
@@ -448,7 +449,17 @@ input {
 }
 
 #img-10{
-	position: absolute;
-	height: 50%;
+	position: relative;
+	height: auto;
 	width: 100%;
+}
+
+/* INDEX PARFUMS */
+#Parfum-name{
+	font-size: xx-large;
+	font-weight: lighter;
+}
+#title-parfums{
+	font-size: xx-large;
+	font-weight: lighter;
 }
