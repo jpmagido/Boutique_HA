@@ -16,7 +16,7 @@ class User < ApplicationRecord
 
 
    #MAILER#
-   
+
    after_create :welcome_send
 
    def welcome_send
