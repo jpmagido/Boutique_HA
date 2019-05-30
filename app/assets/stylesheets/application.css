@@ -14,6 +14,8 @@
  *= require_self
  */
 
+
+
 button:focus {
 	background: #FFC0CB;
 
@@ -21,8 +23,11 @@ button:focus {
 
 footer a{
 	color: white;
+	hover:;
 }
-
+footer a:hover{
+	color: #E3E3E3;
+}
 
 
 /************************/
@@ -56,13 +61,12 @@ footer a{
 #div-sign-in{
 	display: block;
 	border-width: 1px;
-	border-style: outset;
+	border-style: solid;
 	border-radius: 3px;
 	padding: 20px;
 	width: 350px;
-	height: 450px;
+	height: 430px;
 	margin-left: 35%;
-	margin-top: 150px;
 	margin-bottom: 5%;
 }
 #logoNav {
@@ -73,18 +77,24 @@ footer a{
 
 #div-sign-up{
 	border-width: 1px;
-	border-style: outset;
+	border-style: solid;
 	border-radius: 3px;
 	padding: 20px;
 	width: 350px;
 	margin-left: 35%;
-	margin-top: 150px;
+	
 	margin-bottom: 2%;
 }
 
 #logo-1{
 	display: flex;
 	justify-content: center;
+
+}
+#logo-3{
+	display: flex;
+	justify-content: center;
+	margin-top: 10px; 
 
 }
 
@@ -217,7 +227,7 @@ footer a{
     margin-top: 20px;
 }
 
-/********** NAVARB ***********/
+/********** NAVBAR ***********/
 #btnPink {
 	display:block;
 	width: 100px;
@@ -266,18 +276,24 @@ footer a{
 	color: #E3E3E3;
 }
 
+#navbarTogglerDemo01 img{
+	color: #E3E3E3;
+	border: solid;
+	border-color: #E3E3E3;
+}
 
 
 /* BANNIERE Landing Page - Carousel */
 
 .carousel {
 
-	margin-top: 0px;
-  background-color: black;
+	
+ 	background-color: black;
+ 	padding: 50px 20px 20px 20px;
 
 }
 
-/*/ CARDS Fragance Landing Page /*/
+/*/ CARDS Fragance Home/ Static_lp /*/
 #div-container-fragance{
 	display: flex;
 	justify-content: space-around;
@@ -325,7 +341,7 @@ footer a{
 }
 
 .container {
-  padding: 2px 16px;
+  padding: 20px 16px;
 }
 
 .div-title{
@@ -335,7 +351,7 @@ footer a{
 	font-weight: lighter;
 }
 
-/*/ France div Landing Page /*/
+/*/ France div Home/ Static_lp /*/
 
 .div-text-france{
 
@@ -383,7 +399,7 @@ footer a{
 	border-color: white;
 	border-radius: 8px;
 }
-input {
+#div-form input {
 	width: 590px;
 	height: 35px;
 	border-radius: 5px;
@@ -411,14 +427,11 @@ input {
 }
 
 .form-profil {
-	margin-top: 10%;
-	margin-bottom: 79px;
-	margin-right: 70%;
-	margin-left: 10%;
-	padding-right: 20%;
-	padding-left: 0%;
-	border: outset;
+	margin: 20px 0 20px 50px;
+	padding: 20px;
+	border: solid;
 	width: 50%;
+	border-radius: 5px;
 
 }
 
@@ -430,7 +443,7 @@ input {
 	font-weight: bold;
 	font-family: OCR A Std, monospace;
 	margin-bottom: 120px;
-	margin-top: 66px;
+	margin-top: 64px;
 	margin-bottom: 120px;
 
 }
@@ -447,4 +460,10 @@ input {
 #img-10{
 	position: absolute;
 	left: 0;
+}
+
+
+
+.actions{
+	margin-top: 5px;
 }
