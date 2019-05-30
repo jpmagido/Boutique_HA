@@ -14,21 +14,37 @@
 </div>
 
 <!-- Cards -->
-<div class="container">
-  <div class="row d-flex justify-content-around ">
+<div class="container ">
+	<div class="row d-flex justify-content-around ">
+		 <% @items.each do |item| %>
+		<div class="card mb-3" style="width: 21rem;">
+		  <img src="<%= item.image_url %>" class="card-img-top" alt="...">
+		  <div class="card-body ">
+		    <h5 class="card-title"><%= link_to item.name, item_path(item) %></h5>
+		    <p class="card-text"><%= item.description %>.</p>
+		    <p class="card-price"><%= item.price %>$</p>
+		     <% if user_signed_in? %>
+		     	<% if current_user.cart_id != nil %>
+			    <%= form_tag carts_path(@cart), method: "post" do%>
 
-      <% @items.each do |item| %>
-    <div class="card mb-5" style="width: 32rem;">
-      <img src="<%= item.image_url %>" class="card-img-top" alt="...">
-      <div class="card-body ">
-        <h5 class="card-title mb-4" id="Parfum-name"><%= link_to item.name, item_path(item) %></h5>
-        <p class="card-text text-justify mb-4"><%= item.description %>.</p>
-        <p class="card-price mb-4">Prix: <%= item.price %>€</p>
-        <a href="#" class="btn btn-primary btn-sm">Ajouter au panier</a>
-      </div>
-    </div>
-      <% end %>
-  </div>
+
+			    		<input type="hidden" id="id" name="id" size="1" value="<%= item.id %>" />
+				    	<input type="hidden" id="user_id" name="user_id" size="1" value="<%= Cart.find(Cart.where(user_id: current_user.id).ids[0]).id %>" />
+				    	<%= submit_tag "add to cart", class: "btn btn-primary btn-sm"  %>
+
+
+				<% end %>
+				<% end %>
+
+
+			<% end %>
+		  </div>
+		</div>
+		<% end %>
+	</div>
+	<div class="actions mx-auto mb-3" style="max-width: 500px;">
+
+	</div>
 </div>
 <!-- Add Item Link -->
   <div style="height: 100px;  mb-3">
