@@ -21,12 +21,21 @@ button:focus {
 
 }
 
+body{
+	font-family: Optima, sans-serif;
+}
+
+footer, header{
+	font-family: Andale Mono, monospace;
+}
+
 footer a{
 	color: white;
 	hover:;
 }
 footer a:hover{
 	color: #E3E3E3;
+	
 }
 
 
