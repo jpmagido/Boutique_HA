@@ -272,7 +272,8 @@ footer a{
 
 .carousel {
 
- background-color: black;
+	margin-top: 0px;
+  background-color: black;
 
 }
 
@@ -281,6 +282,8 @@ footer a{
 	display: flex;
 	justify-content: space-around;
 	height: 600px;
+
+
 }
 
 .card-flex {
@@ -324,6 +327,7 @@ footer a{
 .container {
   padding: 2px 16px;
 }
+
 .div-title{
 	margin: 150px 0 50px 0;
 	text-align: center;
@@ -358,7 +362,53 @@ footer a{
 	font-weight: lighter;
 	text-align: center;
 }
+/* FORM NEW/EDIT ITEM */
 
+.form-groupe {
+
+	height: 520px;
+}
+.form-groupe h3 {
+
+	text-align: center;
+	margin: 30px 0 30px 0;
+	font-size: xx-large;
+	font-weight: lighter;
+}
+.submit{
+	margin: 30px 250px 0 250px;
+	display: flex;
+	justify-content: center;
+	border: solid;
+	border-color: white;
+	border-radius: 8px;
+}
+input {
+	width: 590px;
+	height: 35px;
+	border-radius: 5px;
+}
+
+/* SHOW ITEM CARD */
+.card-item-show{
+
+
+	height: 520px;
+	width: 1200px;
+	margin-top: 30px;
+	padding-top: 40px;
+
+}
+.card-item-show h1{
+	font-size: xx-large;
+	font-weight: lighter;
+}
+
+.show{
+	border: 1px solid;
+	border-color: #E6E6E6;
+	box-shadow: 5px 5px #E6E6E6;
+}
 
 .form-profil {
 	margin-top: 10%;
@@ -369,7 +419,7 @@ footer a{
 	padding-left: 0%;
 	border: outset;
 	width: 50%;
-	
+
 }
 
 
@@ -382,7 +432,7 @@ footer a{
 	margin-bottom: 120px;
 	margin-top: 66px;
 	margin-bottom: 120px;
-	
+
 }
 
 #p-1{
@@ -391,11 +441,10 @@ footer a{
 	z-index: 100;
 	text-align: center;
 	min-width: 800px;
-	
+
 }
 
 #img-10{
 	position: absolute;
 	left: 0;
 }
-
