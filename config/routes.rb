@@ -1,12 +1,25 @@
 Rails.application.routes.draw do
 
-  root to: "items#index"
+  get 'static_pages/show'
+  get 'static_pages/order' 
+  post 'static_pages/order'
 
+
+  root to: "items#index"
   devise_for :users
 
+  resources :items
 
 
-resources :items
+  resources :carts
+
+
+
+
+
+
+resources :charges
+
 
 
 

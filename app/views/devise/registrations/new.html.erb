@@ -1,4 +1,4 @@
-<div id="form-signup"></div>
+<div id="form-signup container"></div>
 <div id="div-sign-up">
   
 <img id="logoNav" src="https://zupimages.net/up/19/22/qauj.png"><br>
@@ -7,32 +7,36 @@
   <p style="margin-left: 30%;">Please Register</p>
 
   <br>
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <div class="form-group">
-    <label for="exampleInputName1">First Name</label>
-    <input type="text" class="form-control" id="exampleInputName1" aria-describedby="emailHelp" placeholder="Enter First Name">
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name, autofocus: true, autocomplete: "First name" %>
     </div>
     <div class="form-group">
-    <label for="exampleInputName2">Last Name</label>
-    <input type="text" class="form-control" id="exampleInputName2" aria-describedby="emailHelp" placeholder="Enter Last Name">
+      <%= f.label :last_name %><br />
+      <%= f.text_field :last_name, autofocus: true, autocomplete: "Last_name" %>
     </div>
-    <br>
   <div class="form-group">
-    <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+      <%= f.label :email %><br />
+      <%= f.email_field :email, autofocus: true, autocomplete: "Email" %>
     <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
     </div>
     <div class="form-group">
-    <label for="exampleInputPassword1">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+      <%= f.label :password %>
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "new-password" %>
   </div>
   <div class="form-group">
-    <label for="exampleInputPassword1">Password Confirmation</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password Confirmation">
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
   <br>
   <div id="logo-1">
-  <button type="button" class="btn btn-success">Valider</button>
+    <%= f.submit "Sign up" %>
   </div>
+  <% end %>
 </div>
 </div>
 </div>

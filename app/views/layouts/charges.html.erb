@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<title>Paiement Stripe</title>
+
+  <body>
+
+  	<div>
+  		<%= yield %>
+  	</div>
+    
+
+<div>
+	<script src="https://www.paypal.com/sdk/js?client-id=sb"></script>
+	<script>paypal.Buttons().render('body');</script>
+</div>
+    
+
+  </body>
+</html>
+
+<script src="https://js.stripe.com/v3/"></script>
