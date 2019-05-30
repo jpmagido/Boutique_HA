@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 	get 'pages/landing_page'
 	get 'pages/static_lp'
 	root to: "pages#landing_page"

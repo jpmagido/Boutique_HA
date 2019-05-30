@@ -14,29 +14,15 @@
  *= require_self
  */
 
-
-
 button:focus {
 	background: #FFC0CB;
 
 }
 
-body{
-	font-family: Optima, sans-serif;
-}
-
-footer, header{
-	font-family: Andale Mono, monospace;
-}
-
 footer a{
 	color: white;
-	hover:;
 }
-footer a:hover{
-	color: #E3E3E3;
-	
-}
+
 
 
 /************************/
@@ -70,12 +56,13 @@ footer a:hover{
 #div-sign-in{
 	display: block;
 	border-width: 1px;
-	border-style: solid;
+	border-style: outset;
 	border-radius: 3px;
 	padding: 20px;
 	width: 350px;
-	height: 430px;
+	height: 450px;
 	margin-left: 35%;
+	margin-top: 150px;
 	margin-bottom: 5%;
 }
 #logoNav {
@@ -86,24 +73,19 @@ footer a:hover{
 
 #div-sign-up{
 	border-width: 1px;
-	border-style: solid;
+	border-style: outset;
 	border-radius: 3px;
 	padding: 20px;
 	width: 350px;
 	margin-left: 35%;
-	
+	margin-top: 150px;
 	margin-bottom: 2%;
 }
 
 #logo-1{
 	display: flex;
 	justify-content: center;
-
-}
-#logo-3{
-	display: flex;
-	justify-content: center;
-	margin-top: 10px; 
+	
 
 }
 
@@ -236,7 +218,7 @@ footer a:hover{
     margin-top: 20px;
 }
 
-/********** NAVBAR ***********/
+/********** NAVARB ***********/
 #btnPink {
 	display:block;
 	width: 100px;
@@ -285,24 +267,18 @@ footer a:hover{
 	color: #E3E3E3;
 }
 
-#navbarTogglerDemo01 img{
-	color: #E3E3E3;
-	border: solid;
-	border-color: #E3E3E3;
-}
 
 
 /* BANNIERE Landing Page - Carousel */
 
 .carousel {
 
-	
- 	background-color: black;
- 	padding: 50px 20px 20px 20px;
+	margin-top: 0px;
+  background-color: black;
 
 }
 
-/*/ CARDS Fragance Home/ Static_lp /*/
+/*/ CARDS Fragance Landing Page /*/
 #div-container-fragance{
 	display: flex;
 	justify-content: space-around;
@@ -350,7 +326,7 @@ footer a:hover{
 }
 
 .container {
-  padding: 20px 16px;
+  padding: 2px 16px;
 }
 
 .div-title{
@@ -360,7 +336,7 @@ footer a:hover{
 	font-weight: lighter;
 }
 
-/*/ France div Home/ Static_lp /*/
+/*/ France div Landing Page /*/
 
 .div-text-france{
 
@@ -408,8 +384,8 @@ footer a:hover{
 	border-color: white;
 	border-radius: 8px;
 }
-#div-form input {
-	width: 590px;
+input {
+	width: 310px;
 	height: 35px;
 	border-radius: 5px;
 }
@@ -436,11 +412,14 @@ footer a:hover{
 }
 
 .form-profil {
-	margin: 20px 0 20px 50px;
-	padding: 20px;
-	border: solid;
+	margin-top: 10%;
+	margin-bottom: 79px;
+	margin-right: 70%;
+	margin-left: 10%;
+	padding-right: 20%;
+	padding-left: 0%;
+	border: outset;
 	width: 50%;
-	border-radius: 5px;
 
 }
 
@@ -452,7 +431,7 @@ footer a:hover{
 	font-weight: bold;
 	font-family: OCR A Std, monospace;
 	margin-bottom: 120px;
-	margin-top: 64px;
+	margin-top: 66px;
 	margin-bottom: 120px;
 
 }
@@ -469,10 +448,4 @@ footer a:hover{
 #img-10{
 	position: absolute;
 	left: 0;
-}
-
-
-
-.actions{
-	margin-top: 5px;
 }

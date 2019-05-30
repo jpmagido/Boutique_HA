@@ -9,6 +9,7 @@ gem 'faker'
 gem 'table_print'
 gem 'devise'
 gem 'stripe'
+gem 'rails_admin', '~> 1.3'
 
 gem 'paypal-sdk-rest'
 
