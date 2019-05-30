@@ -1,6 +1,7 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
-
+  # active storage work with amazon s3
+  config.active_storage.service = :amazon
   # Code is not reloaded between requests.
   config.cache_classes = true
 
