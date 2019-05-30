@@ -1,11 +1,18 @@
 
 <div class="container">
-    
+    <a href="<%= items_path %>" class="btn btn-outline-info btn-sm pull-right">Retour Index Produit</a>
+   
+    <div class="div-button-spe">
+    <%= form_tag(cart_path(@cart), method: "patch") do%>
+       <%= submit_tag "Empty shopping cart", class: " btn btn-primary btn-sm"  %>
+           <% end %>
+    </div>
+
    <div class="card shopping-cart">
             <div class="card-header  text-dark">
                 <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                 Liste de Commandes 
-                <a href="" class="btn btn-outline-info btn-sm pull-right">Retour aux produits</a>
+                
                 <div class="clearfix"></div>
             </div>
             <% price = 0 %>
@@ -45,36 +52,22 @@
                                     <% end %>
                                 
                                 
-                            <% end %>
-                           
+                            <% end %>                           
                             </div>
-
-
-
                             </div>
                         </div>
                         
                     </div>
-
-               
                     <hr>
                     <% end %>
                     <!-- END PRODUCT -->
                     
+                <!-- If PANIER VIDE METTRE "Panier Vide" 
+                <% #if current_user.cart_id != nil %>
+                    <p>Panier Vide</p>
+                <% #end %>
+            -->
 
-                <div class="pull-right">
-                    <div class="pull-right">
-                    <%= form_tag(cart_path(@cart), method: "patch") do%>
-                        
-                                    
-                                    <%= submit_tag "Update shopping cart", class: " btn btn-primary btn-sm"  %>
-                                
-                                
-                            <% end %>
-                    
-
-                </div>
-            </div>
             <div class="card-footer">
 
                 <div class="pull-right" style="margin: 10px">
@@ -83,10 +76,7 @@
                         <input type="hidden" id="all_item" name="all_item" size="1" value="<%= @items %>" />
                                     
                                     <%= submit_tag "Checkout", class: "btn btn-success pull-right"  %>
-                                
-                                
-                            
-                   
+ 
                     <div class="pull-right" style="margin: 5px">
                         Total price: <b><%= price %>€</b>
                         <% session[:price] = price %>

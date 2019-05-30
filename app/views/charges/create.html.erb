@@ -1,3 +1,10 @@
-<h2>Thanks, you paid <strong>$<%= @amount %></strong>!</h2>
+
+<div class="container-spe">
+<h2>Thanks, you paid !</h2>
 
 <a href="<%= root_path%>">Lien Home</a>
+
+
+<% AdminMailer.order_send(current_user.id).deliver %>
+
+</div>

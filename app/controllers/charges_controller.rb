@@ -12,8 +12,8 @@ class ChargesController < ApplicationController
   		o.save
   		
   	  end		
-  	 
-	  @amount = Order.last.total_price
+
+	  @amount = 500
 
 	  customer = Stripe::Customer.create({
 	    email: params[:stripeEmail],
@@ -32,7 +32,7 @@ class ChargesController < ApplicationController
 	  redirect_to new_charge_path
 	end
 
-	
+
 	
 end
 
