@@ -4,20 +4,17 @@
     </button>
   </div>
   <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" href="<%= root_path %>">
       <img id="logoNav" src="https://zupimages.net/up/19/22/qauj.png" width="200">
     </a>
     <ul class="navbar-nav ml-auto mt-2 mt-lg-2 justify-content-right"> 
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home</a>
+        <a class="nav-link" href="<%= pages_static_lp_path %>">Home</a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="<%= root_path %>">Products</a>
+        <a class="nav-link" href="<%= items_path %>">Products</a>
       </li>
-      <li class="nav-item active">
-        <a class="nav-link " href="<%= carts_path %>"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Panier
-        </a>
-      </li>
+      
       <li class="nav-item active">
         <div class="btn-group dropleft">
           <a class="btn dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Visiteur 

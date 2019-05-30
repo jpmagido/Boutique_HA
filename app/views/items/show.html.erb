@@ -1,22 +1,26 @@
-<br><br><br><div class="card mx-auto mb-3" style="max-width: 1400px;">
-  <div class="row no-gutters">
-    <div class="col-md-4">
-      <img src="<%= @item.image_url %>" class="card-img" alt="...">
-    </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h1 class="card-title"><%= @item.name %></h1>
-        <p class="card-text"><%= @item.description %></p>
-        <p class="card-text" class="text-muted"><%= @item.price %>$</p>
-        <a class="btn btn-primary btn-lg" href="#" role="button">Buy</a>
+<div class="card-item-show mx-auto mb-3" style="max-width: 1400px;">
+  <div class="show">
 
-        <%= link_to 'Edit', edit_item_path(@item), class: "btn btn-primary btn-lg" %>
-        <%= link_to 'Remove', @item,  class: "btn btn-primary btn-lg", method: :delete, data: { confirm: 'Are you sure?'} %>
-        <p><%= link_to 'Home', items_path%></p>
 
+    <div class="row no-gutters">
+      <div class="col-md-4">
+        <img src="<%= @item.image_url %>" class="card-img" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h1 class="card-title"><%= @item.name %></h1>
+          <p class="card-text"><%= @item.description %></p>
+          <p class="card-text" class="text-muted"><%= @item.price %>$</p>
+          <a class="btn btn-primary btn-lg" href="#" role="button">Buy</a>
+
+          <%= link_to 'Edit', edit_item_path(@item), class: "btn btn-primary btn-lg" %>
+          <%= link_to 'Remove', @item,  class: "btn btn-primary btn-lg", method: :delete, data: { confirm: 'Are you sure?'} %>
+          <p><%= link_to 'Home', items_path%></p>
+
+
+        </div>
 
       </div>
-
     </div>
   </div>
 </div>
