@@ -1,9 +1,12 @@
 
 <div class="container">
+	<div id="div-sign-up">
+
 <h2>Forgot your password?</h2>
 
 <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+ 
+ <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="field">
     <%= f.label :email %><br />
@@ -15,5 +18,10 @@
   </div>
 <% end %>
 
-<%= render "devise/shared/links" %>
+<div class="container">
+	<a class="dropdown-item" href="<%= new_user_session_path %>">Log In </a>
+    <a class="dropdown-item" href="<%= new_user_registration_path %>">Sign Up</a>
+</div>
+</div>
+
 </div>

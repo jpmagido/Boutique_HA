@@ -1,0 +1,32 @@
+<div class="container">
+<h1>Bienvenue <%=@user.first_name%> <%=@user.last_name%>Nom Prénom user </h1>
+<!------ Include the above in your HEAD tag ---------->
+<div class="form-profil">
+    <div class="container">
+        <div class="row">
+                    <div class="row">
+                        <div class="col">
+                            <%if @user.avatar.attached?%>
+                            <%= image_tag @user.avatar, alt: 'avatar' %>
+                            <% end %>
+                        </div>
+                        <div class="col">
+                            <h4> <i class="fas fa-user fa-2x"></i> <%=@user.first_name%>  <%=@user.last_name%> User Name</h4>
+                            <i class="fas fa-globe-europe fa-2x"></i><small><cite title="San Francisco, USA"> San Francisco, USA </cite></small>
+                            <p>
+                                <i class="fas fa-envelope-open fa-2x"></i> <%=@user.email%>
+                                <br />
+                                <i class="fas fa-address-card fa-2x"></i> Adress User</a>
+                                <br />
+                                <i class="fas fa-mobile-alt fa-2x"></i> Phone User</p>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <%= link_to 'Edit', edit_user_registration_path(@user), class: "btn btn-primary btn-lg" %>
+          <%= link_to 'Remove', @user,  class: "btn btn-primary btn-lg", method: :delete, data: { confirm: 'Are you sure?'} %>
+          <%= link_to 'Home', pages_static_lp_path, class: "btn btn-primary btn-lg"%>
+            </div>
+            
+</div>
