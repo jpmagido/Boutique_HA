@@ -14,19 +14,9 @@
  *= require_self
  */
 
-
-
 button:focus {
 	background: #FFC0CB;
 
-}
-
-body{
-	font-family: Optima, sans-serif;
-}
-
-footer, header{
-	font-family: Andale Mono, monospace;
 }
 
 footer a{
@@ -36,8 +26,9 @@ footer a{
 
 footer a:hover{
 	color: #E3E3E3;
-	
+
 }
+
 
 
 /************************/
@@ -72,12 +63,13 @@ footer a:hover{
 #div-sign-in{
 	display: block;
 	border-width: 1px;
-	border-style: solid;
+	border-style: outset;
 	border-radius: 3px;
 	padding: 20px;
 	width: 350px;
-	height: 430px;
+	height: 450px;
 	margin-left: 35%;
+	margin-top: 150px;
 	margin-bottom: 5%;
 }
 #logoNav {
@@ -88,12 +80,12 @@ footer a:hover{
 
 #div-sign-up{
 	border-width: 1px;
-	border-style: solid;
+	border-style: outset;
 	border-radius: 3px;
 	padding: 20px;
 	width: 350px;
 	margin-left: 35%;
-	
+	margin-top: 150px;
 	margin-bottom: 2%;
 }
 
@@ -101,11 +93,6 @@ footer a:hover{
 	display: flex;
 	justify-content: center;
 
-}
-#logo-3{
-	display: flex;
-	justify-content: center;
-	margin-top: 10px; 
 
 }
 
@@ -194,7 +181,7 @@ footer a:hover{
     font-size: 20px;
     border: 0;
     outline: 0;
-    background-color: #F6F6F6
+    background-color: #F6F6F6;
 }
 
 .quantity input.qty {
@@ -292,24 +279,18 @@ footer a:hover{
 
 }
 
-#navbarTogglerDemo01 img{
-	color: #E3E3E3;
-	border: solid;
-	border-color: #E3E3E3;
-}
 
 
 /* BANNIERE Landing Page - Carousel */
 
 .carousel {
 
-	
- 	background-color: black;
- 	padding: 50px 20px 20px 20px;
+	margin-top: 0px;
+  background-color: black;
 
 }
 
-/*/ CARDS Fragance Home/ Static_lp /*/
+/*/ CARDS Fragance Landing Page /*/
 #div-container-fragance{
 	display: flex;
 	justify-content: space-around;
@@ -357,17 +338,17 @@ footer a:hover{
 }
 
 .container {
-  padding: 20px 16px;
+  padding: 2px 16px;
 }
 
 .div-title{
-	margin: 150px 0 50px 0;
+	margin: 70px 0 50px 0;
 	text-align: center;
 	font-size: xx-large;
 	font-weight: lighter;
 }
 
-/*/ France div Home/ Static_lp /*/
+/*/ France div Landing Page /*/
 
 .div-text-france{
 
@@ -415,8 +396,8 @@ footer a:hover{
 	border-color: white;
 	border-radius: 8px;
 }
-#div-form input {
-	width: 590px;
+input {
+	width: 310px;
 	height: 35px;
 	border-radius: 5px;
 }
@@ -436,16 +417,20 @@ footer a:hover{
 	font-weight: lighter;
 }
 
-.show{
+.show:hover{
 	border: 1px solid;
 	border-color: #E6E6E6;
-	box-shadow: 5px 5px #E6E6E6;
+	box-shadow: 20px 20px 50px #E6E6E6;
 }
 
 .form-profil {
-	margin: 20px 0 20px 50px;
-	padding: 20px;
-	border: solid;
+	margin-top: 10%;
+	margin-bottom: 79px;
+	margin-right: 70%;
+	margin-left: 10%;
+	padding-right: 20%;
+	padding-left: 0%;
+	border: outset;
 	width: 50%;
 
 	border-radius: 5px;
@@ -460,13 +445,14 @@ footer a:hover{
 	font-weight: bold;
 	font-family: OCR A Std, monospace;
 	margin-bottom: 120px;
-	margin-top: 64px;
-	margin-bottom: 120px;
+	margin-top: 66px;
+	margin-bottom: 40px;
 
 }
 
 #p-1{
-	position: relative;
+	border: solid;
+	position: fixed;
 	padding-top: 5%;
 	z-index: 100;
 	text-align: center;
@@ -475,13 +461,10 @@ footer a:hover{
 }
 
 #img-10{
-	position: absolute;
-	height: 50%;
+	position: relative;
+	height: auto;
 	width: 100%;
 }
-
-
-
 .actions{
 	margin-top: 5px;
 
@@ -496,6 +479,14 @@ footer a:hover{
 	border: solid;
 	width: 200px;
 	margin: 200px 0 200px 20%;
-	padding: 15px; 
-
+	padding: 15px;
+}
+/* INDEX PARFUMS */
+#Parfum-name{
+	font-size: xx-large;
+	font-weight: lighter;
+}
+#title-parfums{
+	font-size: xx-large;
+	font-weight: lighter;
 }

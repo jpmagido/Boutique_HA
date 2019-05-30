@@ -13,11 +13,10 @@ class User < ApplicationRecord
    has_many :orders
    has_many :join_table_orders_items
 
-   
 
-   #MAILER 
-   #
-   
+
+   #MAILER#
+
    after_create :welcome_send
    def welcome_send
    	WelcomeMailer.welcome_send(self).deliver
@@ -25,6 +24,6 @@ class User < ApplicationRecord
    
 
  	#
- 	#MAILER 
-   
+ 	#MAILER
+
 end

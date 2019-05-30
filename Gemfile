@@ -8,6 +8,7 @@ ruby '2.5.1'
 gem 'faker'
 gem 'table_print'
 gem 'devise'
+gem 'rails_admin', '~> 1.3'
 
 #GEM Paiement
 gem 'stripe'
