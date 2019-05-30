@@ -7,17 +7,19 @@
 		    <h5 class="card-title"><%= link_to item.name, item_path(item) %></h5>
 		    <p class="card-text"><%= item.description %>.</p>
 		    <p class="card-price"><%= item.price %>$</p>
-		    <a href="/" class="btn btn-primary btn-sm">Add to Cart</a>
-		    <%= form_tag url_for(@item), action: "update", method: "patch", class: "btn btn-primary btn-sm" do%>
-			    <%= submit_tag("Add to cart") %>
-			    <% end %>
+		     <% if user_signed_in? %>
+			    <%= form_tag carts_path(@cart), method: "post" do%>
+			    	
+			    	<% if current_user.cart_id != nil %>
+			    		<input type="hidden" id="id" name="id" size="1" value="<%= item.id %>" />
+				    	<input type="hidden" id="user_id" name="user_id" size="1" value="<%= Cart.find(Cart.where(user_id: current_user.id).ids[0]).id %>" />
+				    	<%= submit_tag "add to cart", class: "btn btn-primary btn-sm"  %>
+			    	<% end %>
+				    
+				<% end %>
 
-			<%= form_tag "/carts", method: "index" do %>
-	            <button type="button" class="btn btn-primary btn-sm" role="submit">
-	                <a href="/carts" > Add to Cart</a>
-	            </button>
-	            <% end %>
 			
+			<% end %>
 		  </div>
 		</div>
 		<% end %>

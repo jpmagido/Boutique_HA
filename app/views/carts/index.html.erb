@@ -8,9 +8,12 @@
                 <a href="" class="btn btn-outline-info btn-sm pull-right">Retour aux produits</a>
                 <div class="clearfix"></div>
             </div>
+            <% price = 0 %>
+            <% @items.each do |item| %>
+            <% price += item.price %>
             <div class="card-body">
                     <!-- PRODUCT -->
-                    <% @items.each do |item| %>
+                    
                     <div class="row">
                         <div class="col-12 col-sm-12 col-md-2 text-center">
                                 <img class="img-responsive" src="http://placehold.it/120x80" alt="prewiew" width="120" height="80">
@@ -30,24 +33,49 @@
                                     <input type="number" step="1" max="99" min="1" value="1" title="Qty" class="qty" size="4">
                                 </div>
                             </div>
+                            <div class="col-2 col-sm-2 col-md-2 text-right">
+
+                                
+                            <%= form_tag(cart_path(@cart), method: "delete") do%>
+                    
+                                    
+                                    <input type="hidden" id="cart_id" name="cart_id" size="1" value="<%= current_user.cart_id %>" />
+                                    <input type="hidden" id="item_id" name="item_id" size="1" value="<%= item.id %>" />
+                                    
+                                    <%= button_tag(type: "submit", class: "btn btn-primary btn-sm") do%>
+                                    <i class="fa fa-trash" aria-hidden="true"></i>
+                                    <% end %>
+                                
+                                
+                            <% end %>
+                           
+                            </div>
+
+
 
                             </div>
                         </div>
-                        <% end %>
+                        
                     </div>
 
                
                     <hr>
+                    <% end %>
                     <!-- END PRODUCT -->
                     
 
                 <div class="pull-right">
-
                     <div class="pull-right">
+                    <%= form_tag(cart_path(@cart), method: "patch") do%>
+                    
+                                
+                                    
+                                    <%= submit_tag "Update shopping cart", class: " btn btn-primary btn-sm"  %>
+                                
+                                
+                            <% end %>
+                    
 
-                    <a href="" class="btn btn-outline-secondary pull-right">
-                        Update shopping cart
-                    </a>
                 </div>
             </div>
             <div class="card-footer">
@@ -55,7 +83,7 @@
                 <div class="pull-right" style="margin: 10px">
                     <a href="" class="btn btn-success pull-right">Checkout</a>
                     <div class="pull-right" style="margin: 5px">
-                        Total price: <b>50.00€</b>
+                        Total price: <b><%= price %>€</b>
                     </div>
                 </div>
             </div>
