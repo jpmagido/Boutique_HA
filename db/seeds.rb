@@ -26,6 +26,10 @@ def create_items
   end
 end
 
+# 1.times do
+#   Cart.create!(item_id: rand(Item.first.id..Item.last.id), user_id: rand(User.first.id..User.last.id))
+# end
+
 def perfom
   destroy_table_instances
   create_users

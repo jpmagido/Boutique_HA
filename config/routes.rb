@@ -1,16 +1,5 @@
 Rails.application.routes.draw do
 
-  namespace :admin do
-
-      resources :users
-      resources :carts
-      resources :items
-      resources :join_table_orders_items
-      resources :orders
-
-      root to: "carts#index"
-    
-    end
 
 
 	get 'pages/landing_page'
@@ -25,8 +14,6 @@ Rails.application.routes.draw do
 	resources :carts
 	resources :items
 	resources :charges
-
-
 
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
