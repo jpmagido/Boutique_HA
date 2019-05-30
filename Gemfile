@@ -8,13 +8,16 @@ ruby '2.5.1'
 gem 'faker'
 gem 'table_print'
 gem 'devise'
-gem 'stripe'
 
+#GEM Paiement
+gem 'stripe'
 gem 'paypal-sdk-rest'
 
 # Gem Amazon S3
 gem "aws-sdk-s3", require: false
 
+#Gem Administrateur
+gem 'administrate'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'

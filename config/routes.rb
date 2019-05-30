@@ -1,5 +1,18 @@
 Rails.application.routes.draw do
 
+  namespace :admin do
+
+      resources :users
+      resources :carts
+      resources :items
+      resources :join_table_orders_items
+      resources :orders
+
+      root to: "carts#index"
+    
+    end
+
+
 	get 'pages/landing_page'
 	get 'pages/static_lp'
 	root to: "pages#landing_page"
@@ -12,8 +25,6 @@ Rails.application.routes.draw do
 	resources :carts
 	resources :items
 	resources :charges
-
-
 
 
 
