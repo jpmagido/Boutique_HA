@@ -129,6 +129,8 @@ footer a{
 
 #footer{
 	background-color: #333;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 18px;
 	height: 140px;
 	position: bottom;
 	position: sticky;
@@ -447,5 +449,6 @@ input {
 
 #img-10{
 	position: absolute;
-	left: 0;
+	height: 50%;
+	width: 100%;
 }
