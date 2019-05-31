@@ -19,7 +19,7 @@ def create_users
     email: Faker::Internet.free_email, adress: Faker::Address.street_address, phone: Faker::Number.leading_zero_number(10), password: "blablabla")
   end
 end
-
+=begin
 def create_items
 
     Item.create(name: 'Bella Baya', description: "Une jeune femme se promène dans un jardin. Elle est belle, lumineuse, avec ses cheveux lâchés au vent, sa robe aux couleurs chatoyantes et les bracelets cliquant à ses poignets. Son atout séduction ? Ce n'est pas le sourire mystérieux s'attardant au coin de ses lèvres. Ni même son regarde vif et pétillant. Mais les notes fruitées et fleuries dont elle se pare : Bella Baya..", price: '78', image_url: 'https://www.antonius.paris/app/images/frontend/products/bella-baya/bella-baya-1.jpg')
@@ -28,7 +28,7 @@ def create_items
     Item.create(name: 'Obscure Alba Intense', description: "Les nuits de fête sont sans fin. La femme qui se moque de l'aube et profite des fastes de la nuit séduit par son impertinence. Esprit rebelle à la beauté magnétique, elle s'amuse à jouer l'insaisissable. Cette silhouette imperceptible laisse une seule empreinte, celle de son parfum captivant et teinté de fleurs : Obscure Alba Intense.", price: '83', image_url: 'https://www.antonius.paris/app/images/frontend/products/obscure-alba-intense/obscure-alba-intense-1.jpg')
   end
 
-
+=end
 # 1.times do
 #   Cart.create!(item_id: rand(Item.first.id..Item.last.id), user_id: rand(User.first.id..User.last.id))
 # end
