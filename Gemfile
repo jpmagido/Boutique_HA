@@ -1,4 +1,4 @@
-gem 'dotenv-rails' 
+gem 'dotenv-rails'
 
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
@@ -59,7 +59,6 @@ group :development, :test do
 end
 
 group :development do
-  gem 'dotenv-rails' 
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'

@@ -35,7 +35,7 @@ def create_items
 
 def perfom
   destroy_table_instances
-  create_users
+  #create_users
   create_items
 end
 
