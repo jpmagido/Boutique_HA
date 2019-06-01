@@ -9,7 +9,7 @@ gem 'faker'
 gem 'table_print'
 gem 'devise'
 gem 'rails_admin', '~> 1.3'
-gem 'dotenv'
+
 
 #GEM Paiement
 gem 'stripe'
