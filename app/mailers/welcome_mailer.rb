@@ -1,6 +1,6 @@
 
 class WelcomeMailer < ApplicationMailer
-=begin
+
 
 	def welcome_send(user)
 		
@@ -8,5 +8,5 @@ class WelcomeMailer < ApplicationMailer
 		mail to: user.email, subject: "welcome to my site", from: "info@mysite.com"
 
 	end
-=end
+
 end
