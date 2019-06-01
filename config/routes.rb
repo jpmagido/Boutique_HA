@@ -5,8 +5,8 @@ Rails.application.routes.draw do
 	get 'pages/static_lp'
 	root to: "pages#landing_page"
 	devise_for :users
+	resources :users
 	resources :items
-	resources :users, only: [:show]
 	resources :users, only: [:show] do
 		resources :avatar, only: [:create]
 		end
