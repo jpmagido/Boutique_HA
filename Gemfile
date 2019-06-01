@@ -1,4 +1,4 @@
-gem 'dotenv-rails'
+gem 'dotenv-rails', groups: [:development, :test]
 
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
@@ -9,6 +9,7 @@ gem 'faker'
 gem 'table_print'
 gem 'devise'
 gem 'rails_admin', '~> 1.3'
+gem 'dotenv'
 
 #GEM Paiement
 gem 'stripe'
