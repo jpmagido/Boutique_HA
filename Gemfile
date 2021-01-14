@@ -8,7 +8,7 @@ ruby '2.5.1'
 gem 'faker'
 gem 'table_print'
 gem 'devise'
-gem 'rails_admin', '~> 1.3'
+gem 'rails_admin', '~> 1.4'
 gem 'dotenv'
 
 #GEM Paiement
